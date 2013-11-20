@@ -1,0 +1,275 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Selected Text Sharer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-07-20 11:52+0530\n"
+"PO-Revision-Date: 2010-07-20 12:48+0530\n"
+"Last-Translator: Aakash Chakravarthy <aakash.19493@gmail.com>\n"
+"Language-Team: Aakash Chakravarthy <aakash.19493@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../adm-sidebar.php:9
+msgid "Donate and support this plugin's future"
+msgstr "Spenden und Unterstützung dieses Plugin die Zukunft"
+
+#: ../adm-sidebar.php:13
+msgid "Plugin Support"
+msgstr "Plugin-Unterstützung"
+
+#: ../adm-sidebar.php:17
+msgid "Plugin Documentation"
+msgstr "Plugin-Dokumentation"
+
+#: ../adm-sidebar.php:21
+msgid "Bugs Report"
+msgstr "Fehler melden"
+
+#: ../adm-sidebar.php:25
+msgid "FAQ's"
+msgstr "Häufig gestellte Fragen"
+
+#: ../adm-sidebar.php:29
+msgid "Request a feature"
+msgstr "Fordern Sie eine Funktion"
+
+#: ../adm-sidebar.php:33
+msgid "Author Website"
+msgstr "Autor Website"
+
+#: ../adm-sidebar.php:37
+msgid "Support this plugin"
+msgstr "Unterstützen Sie dieses Plugin"
+
+#: ../adm-sidebar.php:41
+msgid "Follow the author"
+msgstr "Folgen Sie den Autor"
+
+#: ../adm-sidebar.php:45
+msgid "Subscribe to Updates"
+msgstr "Abonnieren Sie Updates"
+
+#: ../adm-sidebar.php:49
+msgid "Promote this plugin"
+msgstr "Förderung dieses Plugin"
+
+#: ../adm-sidebar.php:54
+msgid "More plugins"
+msgstr "Weitere Plugins"
+
+#: ../wp-selected-text-sharer.php:50
+msgid "<b>WP Selected Text Sharer</b> plugin is intalled. You should immediately adjust <a href=\"options-general.php?page=wp-selected-text-sharer/wp-selected-text-sharer.php\">the settings</a>"
+msgstr "<b> WP Selected Text Sharer </ b> Plugin installiert ist. Sie sollten sofort die <a href=\"options-general.php?page=wp-selected-text-sharer/wp-selected-text-sharer.php\">Einstellungen</a>"
+
+#: ../wp-selected-text-sharer.php:60
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../wp-selected-text-sharer.php:60
+msgid "Support"
+msgstr "Einstellungen"
+
+#: ../wp-selected-text-sharer.php:342
+msgid "Share this text ..."
+msgstr "Teilen Sie diesen Text…"
+
+#: ../wp-selected-text-sharer.php:364
+msgid "General"
+msgstr "Allgemein"
+
+#: ../wp-selected-text-sharer.php:368
+msgid "Widget Title"
+msgstr "Widget-Titel"
+
+#: ../wp-selected-text-sharer.php:372
+msgid "Share Items"
+msgstr "Sagen Items"
+
+#: ../wp-selected-text-sharer.php:376
+msgid "Add buttons"
+msgstr "Fügen Sie Schaltflächen"
+
+#: ../wp-selected-text-sharer.php:379
+msgid "Add custom button"
+msgstr "Fügen Sie benutzerdefinierte Schaltfläche"
+
+#: ../wp-selected-text-sharer.php:380
+msgid "Add search button"
+msgstr "Add Suchtaste"
+
+#: ../wp-selected-text-sharer.php:381
+msgid "More buttons"
+msgstr "Weitere Schaltflächen"
+
+#: ../wp-selected-text-sharer.php:382
+#: ../wp-selected-text-sharer.php:475
+msgid "Help"
+msgstr "Hilfe"
+
+#: ../wp-selected-text-sharer.php:386
+msgid "Format : Name, Share/Search URL, Icon URL"
+msgstr "Format : Name, Anteil/Suche URL, Symbol URL"
+
+#: ../wp-selected-text-sharer.php:394
+msgid "Customize"
+msgstr "Anpassen"
+
+#: ../wp-selected-text-sharer.php:399
+msgid "Border Color"
+msgstr "Grenze Farbe"
+
+#: ../wp-selected-text-sharer.php:403
+msgid "Background Color"
+msgstr "Hintergrund Farbe"
+
+#: ../wp-selected-text-sharer.php:407
+msgid "Title Background color"
+msgstr "Titel hintergrund farbe"
+
+#: ../wp-selected-text-sharer.php:411
+msgid "Hover Color"
+msgstr "Schweben Farbe"
+
+#: ../wp-selected-text-sharer.php:415
+msgid "Text Color"
+msgstr "Text Farbe"
+
+#: ../wp-selected-text-sharer.php:419
+msgid "Extra Class"
+msgstr "Extra CSS Class"
+
+#: ../wp-selected-text-sharer.php:425
+msgid "Optional"
+msgstr "Fakultativ"
+
+#: ../wp-selected-text-sharer.php:429
+msgid "Use Jquery Version"
+msgstr "Mit jQuery-Version"
+
+#: ../wp-selected-text-sharer.php:434
+msgid "Recommended for fade effects and cross browser support"
+msgstr "Recommended for fade effects and cross-browser support."
+
+#: ../wp-selected-text-sharer.php:437
+msgid "Load scripts in"
+msgstr "Load-Skripte in"
+
+#: ../wp-selected-text-sharer.php:439
+msgid "Header"
+msgstr "Kopfzeile"
+
+#: ../wp-selected-text-sharer.php:440
+msgid "Footer"
+msgstr "Fußzeile"
+
+#: ../wp-selected-text-sharer.php:444
+msgid "Truncate Text"
+msgstr "Kürzen Text"
+
+#: ../wp-selected-text-sharer.php:446
+msgid "Selected texts are truncated when <code>%ts</code> is used in the URL"
+msgstr "Vorgewählte Texte werden beschnitten, wenn <code>%ts</code> im URL verwendet wird"
+
+#: ../wp-selected-text-sharer.php:450
+msgid "Target Content"
+msgstr "Zielinhalt"
+
+#: ../wp-selected-text-sharer.php:454
+msgid "Bitly Settings"
+msgstr "Bitly Einstellungen"
+
+#: ../wp-selected-text-sharer.php:457
+msgid "Bitly Username, API key. Used in twitter URL"
+msgstr "Bitly Benutzername, API key. Verwendet in den Twitter-URL"
+
+#: ../wp-selected-text-sharer.php:462
+msgid "Preview"
+msgstr "Vorschau"
+
+#: ../wp-selected-text-sharer.php:464
+msgid "Select a text to show the widget"
+msgstr "Wählen Sie einen Text, um zu zeigen das Widget"
+
+#: ../wp-selected-text-sharer.php:468
+msgid "Update"
+msgstr "Aktualisierung"
+
+#: ../wp-selected-text-sharer.php:478
+msgid "The format for adding a custom button to the widget is"
+msgstr "Das Format für das Hinzufügen einer benutzerdefinierten Schaltfläche, um das Widget ist"
+
+#: ../wp-selected-text-sharer.php:479
+msgid "<code>Name of the button</code>, <code>Share / Search URL</code>, <code>Icon URL</code>"
+msgstr "<code>Name der Schaltfläche</code>, <code>Anteil / Suche URL</code>, <code>Symbol URL</code>"
+
+#: ../wp-selected-text-sharer.php:481
+#: ../wp-selected-text-sharer.php:518
+msgid "Note:"
+msgstr "Hinweis:"
+
+#: ../wp-selected-text-sharer.php:483
+#, php-format
+msgid "Use <code>%s</code> in the Share/Search URL to use the selected text."
+msgstr "Verwenden Sie <code>%s</code> in der Anteil / suche  URL auf den ausgewählten Text verwenden"
+
+#: ../wp-selected-text-sharer.php:484
+msgid "Use <code>%ts</code> in the URL to use the truncated selected text (115 characters. Used in Twitter URL)."
+msgstr "Verwenden <code>%ts</code> in der URL zu verwenden den abgeschnittenen ausgewählten Text (115 Zeichen bestehen. Verwendet in Twitter URL)."
+
+#: ../wp-selected-text-sharer.php:485
+msgid "Use the text <code>favicon</code> in the Icon URL to automatically get the button icon."
+msgstr "Verwenden Sie den Text <code> Favicon</code> Icon in der URL, um automatisch auf die Schaltfläche klicken."
+
+#: ../wp-selected-text-sharer.php:486
+msgid "Use <code>{url}</code> in the URL to get the current page url."
+msgstr "Verwenden <code>{url}</code> in der URL der aktuellen Seite URL zu bekommen."
+
+#: ../wp-selected-text-sharer.php:487
+msgid "Use <code>{surl}</code> in the URL to get the shortened current page URL."
+msgstr "Verwenden <code>{surl}</code> in der URL der aktuellen Seite verkürzte URL zu bekommen."
+
+#: ../wp-selected-text-sharer.php:488
+msgid "Use <code>{title}</code> in the URL to get the current page title."
+msgstr "Verwenden <code>{title}</code> in der URL, um die aktuelle Seitentitel."
+
+#: ../wp-selected-text-sharer.php:490
+msgid "Popular and recommended buttons are given in by default. Just select the button from the dropdown list. Above settings are required only if you want to add a custom button or change the template"
+msgstr "Beliebt und empfohlen Buttons sind da in der Standardeinstellung. Wählen Sie einfach die Taste aus der Dropdown-Liste. Obigen Einstellungen sind nur erforderlich, wenn Sie eine benutzerdefinierte Schaltfläche hinzufügen möchten, oder ändern Sie die Vorlage"
+
+#: ../wp-selected-text-sharer.php:497
+msgid "Insert more social buttons"
+msgstr "Legen Sie mehr soziale Tasten"
+
+#: ../wp-selected-text-sharer.php:498
+msgid "These buttons are taken from wp-socializer plugin. You can now use these buttons for wp-selected-text-searcher"
+msgstr "Diese Tasten sind von WP-Socializer plugin getroffen. Jetzt können Sie diese Tasten für die wp-selected-Text-Searcher"
+
+#: ../wp-selected-text-sharer.php:499
+msgid "Search ..."
+msgstr "Suche ..."
+
+#: ../wp-selected-text-sharer.php:509
+msgid "Install WP Socializer plugin"
+msgstr "Installieren WP Socializer plugin"
+
+#: ../wp-selected-text-sharer.php:511
+msgid "Sorry, you need to install <b>WP Socializer plugin</b> to get the additional social buttons links and data."
+msgstr "Sorry, müssen Sie <b> WP Socializer Plugin </ b>, um die zusätzlichen Tasten Links und sozialen Daten get install."
+
+#: ../wp-selected-text-sharer.php:512
+msgid "You can install the powerful WP Socializer plugin in one click securely by clicking the Install button below."
+msgstr "Sie können die mächtigen WP-Socializer plugin mit einem Klick sicher installieren, indem Sie auf die Schaltfläche \"Installieren\" weiter unten."
+
+#: ../wp-selected-text-sharer.php:517
+msgid "Install Plugin"
+msgstr "Plugin installieren"
+
+#: ../wp-selected-text-sharer.php:519
+msgid "WP Selected text sharer requires to install WP Socializer to link the additional 98 buttons. <a href=\"http://www.aakashweb.com/wordpress-plugins/wp-socializer/\" target=\"_blank\">See here</a> for more info"
+msgstr "WP Selected text searcher benötigt, um WP Socializer installieren, um das weitere 98 Knöpfe verknüpfen. <a href=\"http://www.aakashweb.com/wordpress-plugins/wp-socializer/\" target=\"_blank\"> Siehe hier </ a> für mehr Infos"
+

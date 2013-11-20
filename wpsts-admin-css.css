@@ -1,0 +1,198 @@
+/*
+ * Admin Page CSS for WP Selected Text Sharer
+ * Author : Aakash Chakravarthy
+ * Version : 1.0
+*/
+
+.wrap h3 {
+	font: italic 21px "Times New Roman", Times, serif;
+	color: #333333;
+	margin: 10px 0px 0px;
+	padding: 0px;
+}
+.wrap h4 {
+	font-weight: bold;
+	display: block;
+	padding: 10px 0px 5px;
+	margin: 0px 0px 5px;
+	border-bottom: 1px solid #e7e7e7;
+	clear: both;
+}
+.wrap h5{
+	margin: 7px 0px;
+	font-size: 13px;
+}
+.wrap h4 .max_min{
+	float: right;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px 7px;
+	cursor: pointer;
+}
+.wrap h4 .max_min:hover{
+	color: #FFFFFF;
+	background: #CC0033;
+}
+.wrap .section{
+	padding: 10px;
+}
+.wrap .section img{
+	vertical-align:middle;
+}
+
+.message .close{
+	float: right;
+	margin: -30px 0px 0px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#leftContent{
+	width: 79%;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+.content {
+	clear: both;
+	padding: 5px 10px 10px;
+	margin: 0px;
+	background: #FFFFFF;
+	border-top: 1px solid #e9e9e9;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 2px solid #CC0033;
+	border-left: 1px solid #e9e9e9;
+}
+#sidebar{
+	width: 20%;
+	float: right;
+	padding: 0px;
+	margin: 0px 10px 0px 0px;
+}
+#sidebar ul{
+	width: 95%;
+	border: 1px solid #E9E9E9;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-khtml-border-radius-bottomright: 10px;
+	-khtml-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	background: #FFFFFF;
+	padding: 5px;
+	margin: 0px 15px 5px 0px;
+}
+#sidebar li{
+	display: block;
+	padding: 3px;
+	border-bottom: 1px solid #E2E2E2;
+}
+#sidebar li a{
+	text-decoration: none;
+}
+#sidebar h4{
+	font: bold 14px Arial, Helvetica, sans-serif;
+}
+.donateBt{
+	border-bottom: 2px solid #FF9900;
+	width: 100%;
+	margin: 0px auto;
+	text-align: center;
+}
+.redText{
+	color: #FF0000;
+}
+.linkBtm{
+	color: #999999;
+	float: right;
+	padding: 0px 3px;
+	margin: -35px 0px 0px;
+	position: absolute;
+	right: 0px;
+}
+.smallText{
+	font-size: 10px;
+	color: #666666;
+}
+.codeBox{
+	background: #FCFCFC;
+	padding: 3px;
+	margin-right: 5px;
+	margin-left: 5px;
+	border: 1px solid #e2e2e2;
+	font-size: 11px;
+}
+.codeBox span{
+	font-family: "Courier New", Courier, monospace;
+	padding: 4px;
+}
+.codeBox span:hover, code:hover{
+	background: #CC0033;
+	color: #FFFFFF;
+}
+#wpsts_lists{
+	width: 100%;
+	font: 12px/2em "Courier New", Courier, monospace;
+	height: 150px;
+}
+.picker{
+	background: #FFFFFF;
+	border: 1px solid #e9e9e9;
+	position: absolute;
+	right: 21.5%;
+	margin-top: 33px;
+}
+.lightBox{
+	margin: 70px auto;
+	border: 10px solid #CC0033;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: #FFFFFF;
+	padding: 10px;
+	width: 500px;
+	height: 500px;
+	display: none;
+}
+.lightBox .wrap{
+	width: 99%;
+	height: 84%;
+	overflow: auto;
+	padding: 0px 0px 0px 5px;
+}
+.lightBox .close{
+	float: right;
+	padding: 3px;
+	border: 1px solid #e9e9e9;
+}
+.listSearch{
+	float: right;
+	margin: 15px 15px -15px;
+}
+.bottomShadow{
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+}
+/* Sprites */
+
+.admSprites a{
+	background: url(images/admin-sprites.png) no-repeat;
+	padding: 0px 0px 3px 20px;
+}
+.admSpr-addthis { background-position: 0 0 !important;} 
+.admSpr-author { background-position: 0 -17px !important;} 
+.admSpr-bug { background-position: 0 -34px !important;} 
+.admSpr-documentation { background-position: 0 -51px !important;} 
+.admSpr-donate { background-position: 0 -68px !important;} 
+.admSpr-error { background-position: 0 -85px !important;} 
+.admSpr-faq { background-position: 0 -102px !important;} 
+.admSpr-feature { background-position: 0 -119px !important;} 
+.admSpr-plugins { background-position: 0 -136px !important;} 
+.admSpr-rss { background-position: 0 -153px !important;} 
+.admSpr-star { background-position: 0 -170px !important;} 
+.admSpr-support { background-position: 0 -187px !important;} 
+.admSpr-twitter { background-position: 0 -204px !important;} 
+.admSpr-warning { background-position: 0 -221px !important;} 
