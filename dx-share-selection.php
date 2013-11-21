@@ -360,7 +360,7 @@ function dxss_admin_page(){
 ?>
 
 <div class="wrap">
-	<h2><img width="32" height="32" src="<?php echo $dxss_pluginpath; ?>images/wp-selected-text-sharer.png" align="absmiddle"/>&nbsp;WP Selected Text Sharer <span class="smallText">v<?php echo WPSTS_VERSION; ?></span></h2>
+	<h2><img width="32" height="32" src="<?php echo $dxss_pluginpath; ?>images/wp-selected-text-sharer.png" align="absmiddle"/>&nbsp;WP Selected Text Sharer <span class="smallText">v<?php echo DXSS_VERSION; ?></span></h2>
 	
 	<div id="leftContent">
 		<form method="post">
