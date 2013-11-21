@@ -22,7 +22,6 @@ window.onload = function(){
 	
 	// Assign defaults
 	if(typeof sts_config !== "undefined"){
-		debugger;
 		for(var keyDef in sts_options){
 			if(sts_config[keyDef] !== undefined){
 				sts_options[keyDef] = sts_config[keyDef];
@@ -44,7 +43,6 @@ window.onload = function(){
 	}
 	
 	function splitList(){
-		debugger;
 		listSplit = (sts_options.lists).split('|');
 		for(i=0; i<listSplit.length; i++){
 			lstSplit[i] = listSplit[i].split(',');
@@ -65,7 +63,6 @@ window.onload = function(){
 		for(i=0; i<listSplit.length; i++){
 			if(lstSplit[i][0] !== null){
 				if(lstSplit[i][2] !== null){
-					debugger;
 					iconUrl = lstSplit[i][2].split(' ').join('');
 					if(iconUrl == 'favicon'){
 						img = '<img src="' + getBaseUrl(lstSplit[i][1]) + 'favicon.ico" width="16" height="16" alt="' + lstSplit[i][0] + '"/> ';
