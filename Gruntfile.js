@@ -7,7 +7,8 @@ module.exports = function(grunt) {
         },
         my_target: {
           files: {
-            'wpsts/jquery.selected-text-sharer.min.js': ['wpsts/dev/jquery.selected-text-sharer.js']
+            'dxss/jquery.selected-text-sharer.min.js': ['dxss/dev/jquery.selected-text-sharer.js'],
+            'dxss/selected-text-sharer.min.js': ['dxss/dev/selected-text-sharer.js']
           }
         }
       }

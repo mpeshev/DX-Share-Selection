@@ -1,13 +1,13 @@
 <?php 
 /** Sidebar for admin page **/
-function wpsts_admin_sidebar(){
-	global $wpsts_pluginpath, $wpsts_donate_link;
-	$txtDomain = 'wpsts';
+function dxss_admin_sidebar(){
+	global $dxss_pluginpath, $dxss_donate_link;
+	$txtDomain = 'dxss';
 	$plugin_name = 'wp-selected-text-sharer';
 	
 	echo "
 <div id='sidebar'>
-	<div class='donateBt'><a href='$wpsts_donate_link' target='_blank'><img src='{$wpsts_pluginpath}images/paypalDonateButton.png' alt='Donate' title='" . __('Donate and support this plugin\'s future', $txtDomain) . "'/></a></div>
+	<div class='donateBt'><a href='$dxss_donate_link' target='_blank'><img src='{$dxss_pluginpath}images/paypalDonateButton.png' alt='Donate' title='" . __('Donate and support this plugin\'s future', $txtDomain) . "'/></a></div>
 	<ul class='admSprites'>
 	
 		<li><a class='admSpr-support' href='http://www.aakashweb.com/wordpress-plugins/{$plugin_name}/' target='_blank'>
@@ -34,7 +34,7 @@ function wpsts_admin_sidebar(){
 			" . __('Author Website', $txtDomain) . "
 		</a></li>
 		
-		<li><a class='admSpr-donate' href='$wpsts_donate_link' target='_blank'>
+		<li><a class='admSpr-donate' href='$dxss_donate_link' target='_blank'>
 			" . __('Support this plugin', $txtDomain) . "
 		</a></li>
 		
