@@ -289,8 +289,7 @@ function wpsts_admin_page(){
 	
 	$wpsts_listsDefault = "Search, $searchUrl, favicon\nTweet this, http://twitter.com/home?status=%ts {surl}, favicon";
 	
-	if ($_POST["wpsts_submit"]){
-	
+	if ( ! empty( $_POST["wpsts_submit"] ) ) {
 		## Get and store options
 		$wpsts_settings['title'] = $_POST['wpsts_title'];
 		$wpsts_settings['lists'] = preg_replace('/^[ \t]*[\r\n]+/m', "", trim(stripslashes($_POST['wpsts_lists'])));
