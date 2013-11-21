@@ -278,7 +278,7 @@ add_action('wp_footer', 'wpsts_jquery_plugin_activate');
 add_action('admin_menu', 'wpsts_addpage');
 
 function wpsts_addpage() {
-    add_submenu_page('options-general.php', 'WP Selected Text Sharer', 'WP Selected Text Sharer', 10, __FILE__, 'wpsts_admin_page');
+    add_submenu_page('options-general.php', 'WP Selected Text Sharer', 'WP Selected Text Sharer', 'manage_options', 'wp-selected-text-sharer', 'wpsts_admin_page');
 }
 
 function wpsts_admin_page(){
