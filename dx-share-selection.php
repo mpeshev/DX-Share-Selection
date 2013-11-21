@@ -19,8 +19,6 @@ if (!defined('WP_CONTENT_URL')) {
 	$dxss_pluginpath = WP_CONTENT_URL . '/plugins/' . plugin_basename(dirname(__FILE__)) . '/';
 }
 
-$dxss_donate_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=donations@aakashweb.com&amp;item_name=Donation for WP Selected Text Sharer Plugin&amp;amount=&amp;currency_code=USD';
-
 ## Load languages
 load_plugin_textdomain('dxss', false, basename(dirname(__FILE__)) . '/languages/');
 
@@ -51,7 +49,7 @@ register_deactivation_hook(__FILE__, 'dxss_plugin_deactivate');
 ## Admin Notices
 function dxss_admin_notices(){
 	if( isset( $_GET['page'] ) && !dxss_is_active() && $_GET['page'] != 'wp-selected-text-sharer/wp-selected-text-sharer.php'){
-		echo '<div class="updated fade"><p>' . __('<b>WP Selected Text Sharer</b> plugin is intalled. You should immediately adjust <a href="options-general.php?page=wp-selected-text-sharer/wp-selected-text-sharer.php">the settings</a>', 'dxss') . '</p></div>';
+		echo '<div class="updated fade"><p>' . __('<b>DX Share Selection</b> plugin is intalled. You should immediately adjust <a href="options-general.php?page=wp-selected-text-sharer/wp-selected-text-sharer.php">the settings</a>', 'dxss') . '</p></div>';
 	}
 }
 add_action('admin_notices', 'dxss_admin_notices');
@@ -247,7 +245,7 @@ add_action('wp_footer', 'dxss_jquery_plugin_activate');
 add_action('admin_menu', 'dxss_addpage');
 
 function dxss_addpage() {
-    add_submenu_page('options-general.php', 'WP Selected Text Sharer', 'WP Selected Text Sharer', 'manage_options', 'wp-selected-text-sharer', 'dxss_admin_page');
+    add_submenu_page('options-general.php', 'DX Share Selection', 'DX Share Selection', 'manage_options', 'wp-selected-text-sharer', 'dxss_admin_page');
 }
 
 function dxss_admin_page(){
@@ -326,7 +324,7 @@ function dxss_admin_page(){
 ?>
 
 <div class="wrap">
-	<h2><img width="32" height="32" src="<?php echo $dxss_pluginpath; ?>images/wp-selected-text-sharer.png" align="absmiddle"/>&nbsp;WP Selected Text Sharer <span class="smallText">v<?php echo DXSS_VERSION; ?></span></h2>
+	<h2><img width="32" height="32" src="<?php echo $dxss_pluginpath; ?>images/wp-selected-text-sharer.png" align="absmiddle"/>&nbsp;DX Share Selection <span class="smallText">v<?php echo DXSS_VERSION; ?></span></h2>
 	
 	<div id="leftContent">
 		<form method="post">
@@ -482,7 +480,7 @@ function dxss_admin_page(){
 				?>
 				<p align="center"><a href="<?php echo $installUrl; ?>" target="_blank" class="button-primary"><?php _e('Install Plugin', 'dxss'); ?></a></p>
 				<b><?php _e('Note:', 'dxss'); ?></b><br />
-	  <small class="smallText"><?php _e('WP Selected text sharer requires to install WP Socializer to link the additional 98 buttons. <a href="http://www.aakashweb.com/wordpress-plugins/wp-socializer/" target="_blank">See here</a> for more info', 'dxss'); ?></small>
+	  <small class="smallText"><?php _e('DX share Selection requires to install WP Socializer to link the additional 98 buttons. <a href="http://www.aakashweb.com/wordpress-plugins/wp-socializer/" target="_blank">See here</a> for more info', 'dxss'); ?></small>
 	<?php endif; ?>
 	</div>
 		
