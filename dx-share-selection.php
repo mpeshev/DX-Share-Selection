@@ -26,7 +26,6 @@ load_plugin_textdomain('dxss', false, basename(dirname(__FILE__)) . '/languages/
 
 ## Include the files
 require_once('integration.php');
-require_once('adm-sidebar.php');
 
 ## WPSTS Is active check
 function dxss_is_active(){
@@ -198,38 +197,9 @@ function dxss_scripts() {
 	
 	## Get the Options
 	$dxss_settings = get_option('dxss_settings_data');
-	
-	$dxss_title = $dxss_settings['title'];
-	$dxss_lists = $dxss_settings['lists'];
-	
-	$dxss_borderColor = $dxss_settings['borderColor'];
-	$dxss_bgColor = $dxss_settings['bgColor'];
-	$dxss_titleColor = $dxss_settings['titleColor'];
-	$dxss_hoverColor = $dxss_settings['hoverColor'];
-	$dxss_textColor = $dxss_settings['textColor'];
-	$dxss_extraClass = $dxss_settings['extraClass'];
-	
-	$dxss_element = $dxss_settings['element'];
 	$dxss_scriptPlace = $dxss_settings['scriptPlace'];
-	$dxss_truncateChars = $dxss_settings['truncateChars'];
-	$dxss_useJquery = $dxss_settings['useJquery'];
-
-	if ($dxss_useJquery == 1){
-		wp_enqueue_script('wp-selected-text-searcher', $dxss_pluginpath . 'dxss/jquery.selected-text-sharer.min.js', array('jquery'), null, $dxss_scriptPlace);
-	}else{
-		wp_enqueue_script('wp-selected-text-searcher', $dxss_pluginpath . 'dxss/selected-text-sharer.min.js', '', null, $dxss_scriptPlace);
-		wp_localize_script('wp-selected-text-searcher', 'sts_config', array(
-			'title' => $dxss_title,
-			'lists' => dxss_get_processed_list(),
-			'truncateChars' => $dxss_truncateChars,
-			'extraClass' => $dxss_extraClass,
-			'borderColor' => $dxss_borderColor,
-			'background' => $dxss_bgColor,
-			'titleColor' => $dxss_titleColor,
-			'hoverColor' => $dxss_hoverColor,
-			'textColor' => $dxss_textColor
-		));
-	}
+		
+	wp_enqueue_script('wp-selected-text-searcher', $dxss_pluginpath . 'dxss/jquery.selected-text-sharer.min.js', array('jquery'), null, $dxss_scriptPlace);
 }
 
 ## Activate Jquery the Jquery
@@ -251,9 +221,7 @@ function dxss_jquery_plugin_activate(){
 	$dxss_element = $dxss_settings['element'];
 	$dxss_scriptPlace = $dxss_settings['scriptPlace'];
 	$dxss_truncateChars = $dxss_settings['truncateChars'];
-	$dxss_useJquery = $dxss_settings['useJquery'];
 
-	if($dxss_useJquery == 1){
 		echo "\n".
 "<script type='text/javascript'>
 /* <![CDATA[ */
@@ -272,7 +240,6 @@ function dxss_jquery_plugin_activate(){
 	}); 
 /* ]]>*/
 </script>\n";
-	}
 }
 add_action('wp_footer', 'dxss_jquery_plugin_activate');
 
@@ -303,11 +270,11 @@ function dxss_admin_page(){
 		$dxss_settings['textColor'] = $_POST['dxss_textColor'];
 		$dxss_settings['extraClass'] = $_POST['dxss_extraClass'];
 		
-		$dxss_settings['useJquery'] = $_POST['dxss_useJquery'];
 		$dxss_settings['scriptPlace'] = $_POST['dxss_scriptPlace'];
 		$dxss_settings['truncateChars'] = $_POST['dxss_truncateChars'];
 		$dxss_settings['element'] = $_POST['dxss_element'];
 		$dxss_settings['bitly'] = $_POST['dxss_bitly'];
+		$dxss_settings['grepElement'] = $_POST['dxssgrep_element'];
 		
 		$dxss_settings['dxss_is_activate'] = 1;
 		update_option("dxss_settings_data", $dxss_settings);
@@ -335,11 +302,11 @@ function dxss_admin_page(){
 	$dxss_hoverColor = $dxss_settings['hoverColor'];
 	$dxss_textColor = $dxss_settings['textColor'];
 	$dxss_extraClass = $dxss_settings['extraClass'];
+	$dxssgrep_element = $dxss_settings['grepElement'];
 	
 	$dxss_element = $dxss_settings['element'];
 	$dxss_scriptPlace = $dxss_settings['scriptPlace'];
 	$dxss_truncateChars = $dxss_settings['truncateChars'];
-	$dxss_useJquery = $dxss_settings['useJquery'];
 	$dxss_bitly = $dxss_settings['bitly'];
 	
 	## Defaults
@@ -352,9 +319,8 @@ function dxss_admin_page(){
 	$dxss_hoverColor = ($dxss_hoverColor == '') ? '#ffffcc' : $dxss_hoverColor;
 	$dxss_textColor = ($dxss_textColor == '') ? '#000' : $dxss_textColor;
 	
-	$dxss_element = ($dxss_element == '') ? 'body' : $dxss_element;
+	$dxss_element = ($dxss_element == '') ? 'body' : $dxssgrep_element;
 	$dxss_scriptPlace = ($dxss_scriptPlace == '') ? '1' : $dxss_scriptPlace;
-	$dxss_useJquery = ($dxss_useJquery == '') ? '1' : $dxss_useJquery;
 	$dxss_truncateChars = ($dxss_truncateChars == '') ? '115' : $dxss_truncateChars;
 	
 ?>
@@ -423,20 +389,16 @@ function dxss_admin_page(){
                           <td><?php _e('Extra Class', 'dxss'); ?></td>
                           <td><input name="dxss_extraClass" type="text" value="<?php echo $dxss_extraClass; ?>"/></td>
                         </tr>
+                        <tr>
+                          <td><?php _e('Grep Element', 'dxss'); ?></td>
+                          <td><input name="dxssgrep_element" type="text" value="<?php echo $dxssgrep_element; ?>"/></td>
+                        </tr>
                   </table>
 				</div>
 				
 				<h4><?php _e('Optional', 'dxss'); ?></h4>
 				<div class="section">
 				  <table width="100%" height="162" border="0">
-                    <tr>
-                      <td width="22%" height="48"><?php _e('Use Jquery Version', 'dxss'); ?></td>
-                      <td width="78%">
-			<select id="dxss_useJquery" name="dxss_useJquery">
-          <option <?php echo $dxss_useJquery == '1' ? ' selected="selected"' : ''; ?> value="1">Yes</option>
-          <option <?php echo $dxss_useJquery == '0' ? ' selected="selected"' : ''; ?> value="0">No</option>
-        </select><br/><small class="smallText"><?php _e('Recommended for fade effects and cross browser support', 'dxss'); ?></small></td>
-                    </tr>
                     <tr>
                       <td height="35"><?php _e('Load scripts in', 'dxss'); ?></td>
                       <td><select id="dxss_scriptPlace" name="dxss_scriptPlace">
@@ -526,11 +488,6 @@ function dxss_admin_page(){
 		
 		
 	</div>
-	
-	<?php dxss_admin_sidebar(); ?><!-- Sidebar -->
-	
-</div>
-
 <?php
 }
 
