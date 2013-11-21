@@ -49,7 +49,7 @@ register_deactivation_hook(__FILE__, 'wpsts_plugin_deactivate');
 
 ## Admin Notices
 function wpsts_admin_notices(){
-	if(!wpsts_is_active() && $_GET['page'] != 'wp-selected-text-sharer/wp-selected-text-sharer.php'){
+	if( isset( $_GET['page'] ) && !wpsts_is_active() && $_GET['page'] != 'wp-selected-text-sharer/wp-selected-text-sharer.php'){
 		echo '<div class="updated fade"><p>' . __('<b>WP Selected Text Sharer</b> plugin is intalled. You should immediately adjust <a href="options-general.php?page=wp-selected-text-sharer/wp-selected-text-sharer.php">the settings</a>', 'wpsts') . '</p></div>';
 	}
 }
