@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 define('DXSS_VERSION', '1.0');
-define('DXSS_AUTHOR', 'Aakash Chakravarthy');
+define('DXSS_AUTHOR', 'Mario Peshev');
 
 if (!defined('WP_CONTENT_URL')) {
 	$dxss_pluginpath = get_option('siteurl') . '/wp-content/plugins/' . plugin_basename(dirname(__FILE__)) . '/';
