@@ -87,7 +87,8 @@
 			}
 			
 			stsBoxEle.css({
-                                'z-index': 200,
+                'z-index': 200,
+                'background-color': 'white',
 				position: 'absolute',
 				display: 'none',
 				margin: 0,

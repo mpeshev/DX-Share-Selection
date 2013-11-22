@@ -23,7 +23,8 @@ if (!defined('WP_CONTENT_URL')) {
 load_plugin_textdomain('dxss', false, basename(dirname(__FILE__)) . '/languages/');
 
 ## Include the files
-require_once('integration.php');
+require_once( 'integration.php' );
+require_once( 'dxss-option-helper.php' );
 
 ## WPSTS Is active check
 function dxss_is_active(){
@@ -98,7 +99,7 @@ add_action('admin_print_styles', 'dxss_admin_css');
 function dxss_shorten_url($url, $format = 'xml'){
 	
 	## Get the Options
-	$dxss_settings = get_option('dxss_settings_data');
+	$dxss_settings = DXSS_Option_Helper::fetch_settings_data();
 	$dxss_bitly = $dxss_settings['bitly'];
 	$bityly_split = explode(',', $dxss_bitly);
 	
@@ -177,7 +178,7 @@ function dxss_get_processed_list(){
 	);
 	
 	## Get the Options
-	$dxss_settings = get_option('dxss_settings_data');
+	$dxss_settings = DXSS_Option_Helper::fetch_settings_data();
 	$dxss_lists = $dxss_settings['lists'];
 	
 	$listExplode = explode("\n", $dxss_lists);
@@ -194,7 +195,7 @@ function dxss_scripts() {
 	global $dxss_pluginpath;
 	
 	## Get the Options
-	$dxss_settings = get_option('dxss_settings_data');
+	$dxss_settings = DXSS_Option_Helper::fetch_settings_data();
 	$dxss_scriptPlace = $dxss_settings['scriptPlace'];
 		
 	wp_enqueue_script('wp-selected-text-searcher', $dxss_pluginpath . 'dxss/jquery.selected-text-sharer.min.js', array('jquery'), null, $dxss_scriptPlace);
@@ -204,7 +205,7 @@ function dxss_scripts() {
 function dxss_jquery_plugin_activate(){
 
 	## Get the Options
-	$dxss_settings = get_option('dxss_settings_data');
+	$dxss_settings = DXSS_Option_Helper::fetch_settings_data();
 	
 	$dxss_title = $dxss_settings['title'];
 	$dxss_lists = $dxss_settings['lists'];
@@ -252,10 +253,6 @@ function dxss_admin_page(){
 	global $dxss_pluginpath;
 	$dxss_updated = false;
 	
-	$searchUrl = get_bloginfo('url') . '/?s=%s';
-	
-	$dxss_listsDefault = "Search, $searchUrl, favicon\nTweet this, http://twitter.com/home?status=%ts {surl}, favicon";
-	
 	if ( ! empty( $_POST["dxss_submit"] ) ) {
 		## Get and store options
 		$dxss_settings['title'] = $_POST['dxss_title'];
@@ -275,7 +272,7 @@ function dxss_admin_page(){
 		$dxss_settings['grepElement'] = $_POST['dxssgrep_element'];
 		
 		$dxss_settings['dxss_is_activate'] = 1;
-		update_option("dxss_settings_data", $dxss_settings);
+		DXSS_Option_Helper::update_settings_data( $dxss_settings );
 		$dxss_updated = true;
 		
 		if(get_option("dxss_active") == 0){
@@ -289,7 +286,7 @@ function dxss_admin_page(){
 	}
 	
 	## Get the Options
-	$dxss_settings = get_option('dxss_settings_data');
+	$dxss_settings = DXSS_Option_Helper::fetch_settings_data();
 	
 	$dxss_title = $dxss_settings['title'];
 	$dxss_lists = $dxss_settings['lists'];
@@ -306,21 +303,6 @@ function dxss_admin_page(){
 	$dxss_scriptPlace = $dxss_settings['scriptPlace'];
 	$dxss_truncateChars = $dxss_settings['truncateChars'];
 	$dxss_bitly = $dxss_settings['bitly'];
-	
-	## Defaults
-	$dxss_title = ($dxss_title == '') ? __('Share this text ...', 'dxss') : $dxss_title;
-	$dxss_lists = ($dxss_lists == '') ? $dxss_listsDefault : $dxss_lists;
-	
-	$dxss_borderColor = ($dxss_borderColor == '') ? '#444' : $dxss_borderColor;
-	$dxss_bgColor = ($dxss_bgColor == '') ? '#fff' : $dxss_bgColor;
-	$dxss_titleColor = ($dxss_titleColor == '') ? '#f2f2f2' : $dxss_titleColor;
-	$dxss_hoverColor = ($dxss_hoverColor == '') ? '#ffffcc' : $dxss_hoverColor;
-	$dxss_textColor = ($dxss_textColor == '') ? '#000' : $dxss_textColor;
-	
-	$dxss_element = ($dxss_element == '') ? 'body' : $dxssgrep_element;
-	$dxss_scriptPlace = ($dxss_scriptPlace == '') ? '1' : $dxss_scriptPlace;
-	$dxss_truncateChars = ($dxss_truncateChars == '') ? '115' : $dxss_truncateChars;
-	
 ?>
 
 <div class="wrap">
