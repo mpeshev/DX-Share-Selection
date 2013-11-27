@@ -49,8 +49,8 @@ register_deactivation_hook(__FILE__, 'dxss_plugin_deactivate');
 
 ## Admin Notices
 function dxss_admin_notices(){
-	if( isset( $_GET['page'] ) && !dxss_is_active() && $_GET['page'] != 'wp-selected-text-sharer/wp-selected-text-sharer.php'){
-		echo '<div class="updated fade"><p>' . __('<b>DX Share Selection</b> plugin is intalled. You should immediately adjust <a href="options-general.php?page=wp-selected-text-sharer/wp-selected-text-sharer.php">the settings</a>', 'dxss') . '</p></div>';
+	if( isset( $_GET['page'] ) && !dxss_is_active() && $_GET['page'] != 'dx-share-selection'){
+		echo '<div class="updated fade"><p>' . __('<b>DX Share Selection</b> plugin is intalled. You should immediately adjust <a href="options-general.php?page=dx-share-selection">the settings</a>', 'dxss') . '</p></div>';
 	}
 }
 add_action('admin_notices', 'dxss_admin_notices');
@@ -60,7 +60,7 @@ function dxss_plugin_actions($links, $file){
 	static $this_plugin;
 	if(!$this_plugin) $this_plugin = plugin_basename(__FILE__);
 	if( $file == $this_plugin ){
-		$settings_link = '<a href="options-general.php?page=wp-selected-text-sharer/wp-selected-text-sharer.php">' . __('Settings', 'dxss') . '</a> ' . '|' . ' <a href="http://www.aakashweb.com/">' . __('Support', 'dxss') . '</a>';
+		$settings_link = '<a href="options-general.php?page=dx-share-selection">' . __('Settings', 'dxss') . '</a> ' . '|' . ' <a href="http://www.aakashweb.com/">' . __('Support', 'dxss') . '</a>';
 		$links = array_merge( array($settings_link), $links);
 	}
 	return $links;
@@ -74,11 +74,11 @@ function dxss_admin_js() {
 	$color_url = $dxss_pluginpath . '/js/farbtastic/farbtastic.js';
 	$dxss_js = $dxss_pluginpath . '/dxss/jquery.selected-text-sharer.min.js';
 	
-	if (isset($_GET['page']) && $_GET['page'] == 'wp-selected-text-sharer/wp-selected-text-sharer.php') {
+	if (isset($_GET['page']) && $_GET['page'] == 'dx-share-selection') {
 		wp_enqueue_script('jquery');
-		wp_enqueue_script('wp-selected-text-sharer', $admin_js_url, array('jquery'));
-		wp_enqueue_script('farbtastic', $color_url, array('jquery', 'wp-selected-text-sharer'));
-		wp_enqueue_script('dxss_js', $dxss_js, array('jquery', 'wp-selected-text-sharer', 'farbtastic'));
+		wp_enqueue_script('dx-share-selection', $admin_js_url, array('jquery'));
+		wp_enqueue_script('farbtastic', $color_url, array('jquery', 'dx-share-selection'));
+		wp_enqueue_script('dxss_js', $dxss_js, array('jquery', 'dx-share-selection', 'farbtastic'));
 	}
 }
 add_action('admin_print_scripts', 'dxss_admin_js');
@@ -87,7 +87,7 @@ add_action('admin_print_scripts', 'dxss_admin_js');
 function dxss_admin_css() {
 	global $dxss_pluginpath;
 	
-	if (isset($_GET['page']) && $_GET['page'] == 'wp-selected-text-sharer/wp-selected-text-sharer.php') {
+	if (isset($_GET['page']) && $_GET['page'] == 'dx-share-selection') {
 		wp_enqueue_style('dxss-admin-css', $dxss_pluginpath . 'dxss-admin-css.css'); 
 		wp_enqueue_style('farbtastic-css', $dxss_pluginpath . '/js/farbtastic/farbtastic.css'); 
 	}
@@ -246,7 +246,7 @@ add_action('wp_footer', 'dxss_jquery_plugin_activate');
 add_action('admin_menu', 'dxss_addpage');
 
 function dxss_addpage() {
-    add_submenu_page('options-general.php', 'DX Share Selection', 'DX Share Selection', 'manage_options', 'wp-selected-text-sharer', 'dxss_admin_page');
+    add_submenu_page('options-general.php', 'DX Share Selection', 'DX Share Selection', 'manage_options', 'dx-share-selection', 'dxss_admin_page');
 }
 
 function dxss_admin_page(){
@@ -306,7 +306,7 @@ function dxss_admin_page(){
 ?>
 
 <div class="wrap">
-	<h2><img width="32" height="32" src="<?php echo $dxss_pluginpath; ?>images/wp-selected-text-sharer.png" align="absmiddle"/>&nbsp;DX Share Selection <span class="smallText">v<?php echo DXSS_VERSION; ?></span></h2>
+	<h2><img width="32" height="32" src="<?php echo $dxss_pluginpath; ?>images/dx-share-selection.png" align="absmiddle"/>&nbsp;DX Share Selection <span class="smallText">v<?php echo DXSS_VERSION; ?></span></h2>
 	
 	<div id="leftContent">
 		<form method="post">
