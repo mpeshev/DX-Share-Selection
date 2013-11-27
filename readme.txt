@@ -3,7 +3,7 @@ Contributors: nofearinc
 Donate link: http://devwp.eu/
 Author URI: http://devwp.eu/
 Tags: posts, page, links, plugin, share, search, jquery, content, social, social bookmarking, tweet, Facebook, twitter, bitly
-Requires at least: 3.1
+Requires at least: 3.6
 Tested up to: 3.7.1
 Stable tag: trunk
 
