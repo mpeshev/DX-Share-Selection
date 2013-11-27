@@ -4,13 +4,13 @@ Plugin Name: DX Share Selection
 Plugin URI: http://www.devwp.eu/
 Plugin Author: nofeairnc
 Description: DX Share Selection is a fork of WP Selected Text sharer aiming to share your selected text in social networks. Select a text/code snippet from your post/page and share it to various social media websites.
-Version: 1.0
+Version: 1.2
 Author URI: http://www.devwp.eu/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-define('DXSS_VERSION', '1.0');
+define('DXSS_VERSION', '1.2');
 define('DXSS_AUTHOR', 'Mario Peshev');
 
 if (!defined('WP_CONTENT_URL')) {
