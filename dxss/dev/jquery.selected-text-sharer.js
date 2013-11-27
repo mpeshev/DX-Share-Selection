@@ -42,7 +42,7 @@
         
         function createListBox(ele, e){
 			e = e || window.event;
-			stsBox = '<div class="stsBox ' + options.extraClass + '"><div class="title">' + options.title + '<a href="http://www.aakashweb.com" title="What is this ?" target="_blank" rel="follow">?</a></div><div class="list"><ul></ul></div><span class="arrow"></span></div>';
+			stsBox = '<div class="stsBox ' + options.extraClass + '"><div class="title">' + options.title + '</div><div class="list"><ul></ul></div><span class="arrow"></span></div>';
 			
 			if(ele.height() == $('body').height()){
 				ele.append(stsBox);

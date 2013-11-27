@@ -60,7 +60,7 @@ function dxss_plugin_actions($links, $file){
 	static $this_plugin;
 	if(!$this_plugin) $this_plugin = plugin_basename(__FILE__);
 	if( $file == $this_plugin ){
-		$settings_link = '<a href="options-general.php?page=dx-share-selection">' . __('Settings', 'dxss') . '</a> ' . '|' . ' <a href="http://www.aakashweb.com/">' . __('Support', 'dxss') . '</a>';
+		$settings_link = '<a href="options-general.php?page=dx-share-selection">' . __('Settings', 'dxss') . '</a> ' . __('Support', 'dxss') . '</a>';
 		$links = array_merge( array($settings_link), $links);
 	}
 	return $links;
