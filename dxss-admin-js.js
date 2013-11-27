@@ -1,6 +1,6 @@
 var lists = [];
 lists.push( Array('...', '#', 'favicon' ));
-lists.push( Array('Twitter', 'http://twitter.com/home?status=%ts {surl}', 'favicon') );
+lists.push( Array('Twitter', 'http://twitter.com/home?status=%ts {url}', 'favicon') );
 lists.push( Array('Facebook', 'http://www.facebook.com/sharer.php?t=%s&u={url}', 'favicon') );
 lists.push( Array('Wikipedia (en)', 'http://en.wikipedia.org/w/index.php?title=Special:Search&search=%s', 'favicon') );
 lists.push( Array('Google Maps', 'http://maps.google.com/?q=%s', 'favicon') );
@@ -41,8 +41,10 @@ $j(document).ready(function(){
 			$j('.wpsrBox').fadeIn();
 			$j('#dxss_list_search').focus();
 		}else{
-			val = $j('#dxss_lists').val() + "\n" + lists[$j(this).val()];
-			$j('#dxss_lists').val(val);
+			if( $j(this).val() > 0 ) {
+				val = $j('#dxss_lists').val() + "\n" + lists[$j(this).val()];
+				$j('#dxss_lists').val(val);
+			}
 		}
 	});
 	
