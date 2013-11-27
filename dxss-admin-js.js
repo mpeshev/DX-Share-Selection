@@ -23,19 +23,6 @@ $j(document).ready(function(){
 	$j('#colorpicker').hide();
 	$j('.helpWindow, .wpsrBox').hide();
 	
-	$j('h4').append('<span class="max_min" title="Collapse">-</span>');
-
-	$j('h4 .max_min').toggle(
-		function(){ 
-			$j(this).parent().next().slideUp();
-			$j(this).text('+'); 
-		},
-		function(){ 
-			$j(this).parent().next().slideDown(); 
-			$j(this).text('-'); 
-		}
-	);
-	
 	$j('.message').append('<span class="close">x</span>');
 	
 	$j('.message .close').click(function(){
