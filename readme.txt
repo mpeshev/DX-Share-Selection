@@ -65,8 +65,6 @@ Yes, define the given selector in the admin section.
 
 Core jQuery plugin, original WP Selected Text Sharer plugin by Aakash Chakravarthy ([vaakash](http://wordpress.org/extend/plugins/profile/vaakash))
 
-* [More Plugins](http://www.aakashweb.com/wordpress-plugins/)
-
 == Upgrade Notice ==
 
 Initial Version. No upgrade required
