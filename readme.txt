@@ -4,7 +4,7 @@ Donate link: http://devwp.eu/
 Author URI: http://devwp.eu/
 Tags: posts, page, links, plugin, share, search, jquery, content, social, social bookmarking, tweet, Facebook, twitter, bitly
 Requires at least: 3.6
-Tested up to: 3.7.1
+Tested up to: 4.5
 Stable tag: trunk
 
 Allows you to share/search selected text from your site - select a snippet, search for it or share it to popular social networks. 
